@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -42,7 +44,7 @@
 
         <div class="weui-cells__title"></div>
         <div class="weui-btn-area">
-            <a class="weui-btn weui-btn_primary" href="javascript:alter('你点击了确定按钮');" id="showTooltips">确定</a>
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">确定</a>
         </div>
 </body>
 </html>

@@ -44,8 +44,8 @@ String   path   =   request.getContextPath();
 String   basePath   =   request.getScheme()+"://"+request.getServerName()+path+"/";  
 //String   basePath   = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
 System.out.println("basePath:"+basePath);
-
-Map<String, String> ret = Sign.sign(TokenThread.jsapiTicket.getTicket(),basePath);
+String requestURL = request.getRequestURL().toString();
+Map<String, String> ret = Sign.sign(TokenThread.jsapiTicket.getTicket(),requestURL);
 System.out.println("Token:"+TokenThread.accessToken.getToken() );
 System.out.println("ticket:"+TokenThread.jsapiTicket.getTicket());
 System.out.println("url:"+ret.get("url"));
@@ -64,6 +64,7 @@ System.out.println("signature:"+ret.get("signature"));
 "timestamp:"<%=ret.get("timestamp")%><br>
 "nonceStr:"<%=ret.get("nonceStr")%><br>
 "signature:"<%=ret.get("signature")%><br>
+"requestURL:"<%=requestURL%> <br>
 
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
@@ -80,7 +81,8 @@ System.out.println("signature:"+ret.get("signature"));
  */
 wx.config({
     debug: true,
-    appId: 'wx9b04837925279ae8',
+   // appId: 'wx9b04837925279ae8', 赵民君
+    appId: '<%=TokenThread.appid%>',
     timestamp: '<%=ret.get("timestamp")%>',
     nonceStr: '<%=ret.get("nonceStr")%>',
     signature: '<%=ret.get("signature")%>',

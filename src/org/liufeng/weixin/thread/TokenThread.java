@@ -26,6 +26,9 @@ public class TokenThread implements Runnable {
 			try {
 				accessToken = WeixinUtil.getAccessToken(appid, appsecret);
 				if (null != accessToken) {
+					
+					log.info("appid:{}", appid);
+					log.info("appsecret:{}", appsecret);
 					log.info("获取access_token成功，有效时长{}秒 token:{}", accessToken.getExpiresIn(), accessToken.getToken());
 					
 					//获取ticket

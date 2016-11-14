@@ -18,12 +18,17 @@
 		<!-- 配置获取access_token所需参数appid和appsecret -->
 		<init-param>
 			<param-name>appid</param-name>
-			<param-value>wx9b04837925279ae8</param-value>
+			<!-- zhaomj 公众号 -->
+			<!-- <param-value>wx9b04837925279ae8</param-value> -->
+			<!-- 测试 公众号 -->
+			<param-value>wx3739028c4d48b287</param-value>
 		</init-param>
 		<init-param>
 			<param-name>appsecret</param-name>
-			<!--<param-value>572bd6a1fc48a6e9b7bb5011120dff77</param-value> -->
-			<param-value>4144a15ae3dedb87bad14b1dc2e76159</param-value>
+			<!-- zhaomj 公众号 -->
+			<!--<param-value>4144a15ae3dedb87bad14b1dc2e76159</param-value> -->
+			<!-- 测试 公众号 -->
+			<param-value>c4e7a6a960d0e2fed949584845af2593</param-value>
 		</init-param>
 		<load-on-startup>0</load-on-startup>
 	</servlet>
