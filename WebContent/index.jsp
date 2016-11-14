@@ -4,11 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-
-    <link rel="stylesheet" href="css/weui.css"/>
-
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<link rel="stylesheet" href="css/weui.css"/>
 <title>门特方案、费用查询</title>
 </head>
 <body>
@@ -16,7 +13,7 @@
 <div class="weui-cells__title">表单git</div>
         <div class="weui-cells weui-cells_form">
             <div class="weui-cell">
-                <div class="weui-cell__hd"><label class="weui-label">qq</label></div>
+                <div class="weui-cell__hd"><label class="weui-label">医保卡号</label></div>
                 <div class="weui-cell__bd">
                     <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入qq号"/>
                 </div>
@@ -58,7 +55,7 @@
 
         <div class="weui-cells__title">表单报错</div>
         <div class="weui-btn-area">
-            <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">确定</a>
+            <a class="weui-btn weui-btn_primary" href="javascript:alter('你点击了确定按钮')" id="showTooltips">确定</a>
         </div>
 </body>
 </html>
