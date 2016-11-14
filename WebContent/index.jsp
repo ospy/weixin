@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,19 +13,17 @@
             <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">医保卡号</label></div>
                 <div class="weui-cell__bd">
-                    <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入qq号"/>
+                    <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入医保卡号"/>
                 </div>
             </div>
-            <div class="weui-cell weui-cell_vcode">
+            <div class="weui-cell">
                 <div class="weui-cell__hd">
-                    <label class="weui-label">手机号</label>
+                    <label class="weui-label">身份证号</label>
                 </div>
                 <div class="weui-cell__bd">
-                    <input class="weui-input" type="tel" placeholder="请输入手机号">
-                </div>
-                <div class="weui-cell__ft">
-                    <a href="javascript:;" class="weui-vcode-btn">获取验证码</a>
-                </div>
+                  <input class="weui-input" type="tel" placeholder="请输入身份证号">
+              </div>
+
             </div>
             <div class="weui-cell">
                 <div class="weui-cell__hd"><label for="" class="weui-label">日期</label></div>
@@ -41,21 +37,12 @@
                     <input class="weui-input" type="datetime-local" value="" placeholder=""/>
                 </div>
             </div>
-            <div class="weui-cell weui-cell_vcode">
-                <div class="weui-cell__hd"><label class="weui-label">验证码</label></div>
-                <div class="weui-cell__bd">
-                    <input class="weui-input" type="number" placeholder="请输入验证码"/>
-                </div>
-                <div class="weui-cell__ft">
-                    <img class="weui-vcode-img" src="./images/vcode.jpg" />
-                </div>
-            </div>
         </div>
-        <div class="weui-cells__tips">底部说明文字底部说明文字</div>
+        <div class="weui-cells__tips">如不输入起止时间，则默认为最后一次门特</div>
 
-        <div class="weui-cells__title">表单报错</div>
+        <div class="weui-cells__title"></div>
         <div class="weui-btn-area">
-            <a class="weui-btn weui-btn_primary" href="javascript:alter('你点击了确定按钮')" id="showTooltips">确定</a>
+            <a class="weui-btn weui-btn_primary" href="javascript:alter('你点击了确定按钮');" id="showTooltips">确定</a>
         </div>
 </body>
 </html>
