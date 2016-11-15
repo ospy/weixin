@@ -51,7 +51,7 @@
         </div>
 </form>
 <div class="weui-footer">
-            <p class="weui-footer__text">Copyright &copy; 2008-2016 weui.io</p>
+            <p class="weui-footer__text">Copyright &copy; 2016-2018 cdkangfu.com</p>
 </div>
 </body>
 </html>
