@@ -7,7 +7,7 @@ public class ThreadTest {
 		System.out.println(threadMain.getName());
 		Thread thread1 = new Thread(new GetTokenThread());
 		thread1.start();
-		threadMain.sleep(90000);
+		threadMain.sleep(3000);
 		System.out.println(thread1.isAlive());
 //		thread1.start();
 		Thread thread2 = new SubThread();

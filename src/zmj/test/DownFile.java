@@ -45,7 +45,7 @@ public class DownFile {
 		long startTime = System.currentTimeMillis();
 		long start = System.nanoTime(); // 获取开始时间
 		DownFile d = new DownFile();
-		d.saveToFile("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=11850928&retmode=xml", "D:\\abc.xml");
+		d.saveToFile("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=11850928&retmode=xml", "D:\\abc.xml");
 		System.out.println("down!");
 		long endTime = System.currentTimeMillis();
 		System.out.println("Time:" + (endTime - startTime)+ "ms");
