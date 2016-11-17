@@ -40,6 +40,12 @@ public class QyCoreServlet extends HttpServlet {
 		String nonce = request.getParameter("nonce");
 		// 随机字符串
 		String echostr = request.getParameter("echostr");
+		System.out.println("-----------------");
+		System.out.println("msg_signature："+ signature);
+		System.out.println("timestamp："+ timestamp);
+		System.out.println("nonce："+ nonce);
+		System.out.println("echostr："+ echostr);
+		
 		String sEchoStr; //需要返回的明文
 		PrintWriter out = response.getWriter();
 		// 通过检验signature对请求进行校验，若校验成功则原样返回echostr，表示接入成功，否则接入失败
