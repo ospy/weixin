@@ -22,7 +22,6 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 import org.apache.commons.codec.binary.Base64;
-import org.liufeng.weixin.util.WeixinUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,7 +41,7 @@ import org.slf4j.LoggerFactory;
  * </ol>
  */
 public class WXBizMsgCrypt {
-	private static Logger log = LoggerFactory.getLogger(WeixinUtil.class);
+	private static Logger log = LoggerFactory.getLogger(WXBizMsgCrypt.class);
 	static Charset CHARSET = Charset.forName("utf-8");
 	Base64 base64 = new Base64();
 	byte[] aesKey;
@@ -281,8 +280,8 @@ public class WXBizMsgCrypt {
 	public String VerifyURL(String msgSignature, String timeStamp, String nonce, String echoStr)
 			throws AesException {
 		String signature = SHA1.getSHA1(token, timeStamp, nonce, echoStr);
-		log.info(msgSignature);
-		log.info(signature);
+		log.info("VerifyURL msgSignature:"+msgSignature);
+		log.info("VerifyURL signature:"+signature);
 		if (!signature.equals(msgSignature)) {
 			throw new AesException(AesException.ValidateSignatureError);
 		}
@@ -290,5 +289,26 @@ public class WXBizMsgCrypt {
 		String result = decrypt(echoStr);
 		return result;
 	}
+	
+	
+	
+	public String DecryptMsg2(String msgSignature, String timeStamp, String nonce, String encrypt)
+			throws AesException {
+		// 验证安全签名
+		String signature = SHA1.getSHA1(token, timeStamp, nonce, encrypt);
+
+		// 和URL中的签名比较是否相等
+		 System.out.println("第三方收到URL中的签名：" + msgSignature);
+		 System.out.println("第三方校验签名：" + signature);
+		if (!signature.equals(msgSignature)) {
+			throw new AesException(AesException.ValidateSignatureError);
+		}
+
+		// 解密
+		String result = decrypt(encrypt);
+		return result;
+	}
+	
+	
 
 }
