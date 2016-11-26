@@ -9,45 +9,37 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
-		<servlet-name>initServlet</servlet-name>
-		<servlet-class>
+    <servlet-name>initServlet</servlet-name>
+    <servlet-class>
 			org.liufeng.weixin.servlet.InitServlet
 		</servlet-class>
-		<!-- 配置获取access_token所需参数appid和appsecret -->
-		<init-param>
-			<param-name>appid</param-name>
-			<param-value>wx9b04837925279ae8</param-value>
-		</init-param>
-		<init-param>
-			<param-name>appsecret</param-name>
-			<!--<param-value>572bd6a1fc48a6e9b7bb5011120dff77</param-value> -->
-			<param-value>4144a15ae3dedb87bad14b1dc2e76159</param-value>
-		</init-param>
-		<load-on-startup>0</load-on-startup>
-	</servlet>
-  
-  
+    <init-param>
+      <param-name>appid</param-name>
+      <param-value>wx3739028c4d48b287</param-value>
+    </init-param>
+    <init-param>
+      <param-name>appsecret</param-name>
+      <param-value>c4e7a6a960d0e2fed949584845af2593</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
   <servlet>
-		<servlet-name>coreServlet</servlet-name>
-		<servlet-class>
+    <servlet-name>coreServlet</servlet-name>
+    <servlet-class>
 			org.liufeng.course.servlet.CoreServlet
 		</servlet-class>
-	</servlet>
-	<!-- url-pattern中配置的/coreServlet用于指定该Servlet的访问路径 -->
-	<servlet-mapping>
-		<servlet-name>coreServlet</servlet-name>
-		<url-pattern>/coreServlet</url-pattern>
-	</servlet-mapping>
-  
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>coreServlet</servlet-name>
+    <url-pattern>/coreServlet</url-pattern>
+  </servlet-mapping>
   <servlet>
-		<servlet-name>wechat</servlet-name>
-		<servlet-class>zmj.wx.wechat.WechatCallbackApi</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>wechat</servlet-name>
-		<url-pattern>/wx/laozhao136786874</url-pattern>
-	</servlet-mapping>
+    <servlet-name>wechat</servlet-name>
+    <servlet-class>zmj.wx.wechat.WechatCallbackApi</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>wechat</servlet-name>
+    <url-pattern>/wx/laozhao136786874</url-pattern>
+  </servlet-mapping>
 </web-app>
